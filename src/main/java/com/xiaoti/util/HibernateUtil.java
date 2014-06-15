@@ -1,5 +1,4 @@
-package org.hibernate.tutorial.util;
-
+package com.xiaoti.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
