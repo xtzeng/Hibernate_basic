@@ -6,7 +6,7 @@
 <hibernate-mapping>
 	<class name="com.xiaoti.model.Student" table="student">
 		<id name="id">
-		<generator class="increment"/>
+			<generator class="increment"/>
 		</id>
 		<property name="name" />
 		<property name="age" />
