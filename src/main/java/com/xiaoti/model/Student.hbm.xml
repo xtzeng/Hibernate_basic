@@ -10,6 +10,7 @@
 		</id>
 		<property name="name" />
 		<property name="age" />
+		<property name="lastUpdateTime"  column="last_update_time" />
     </class>
 	
 </hibernate-mapping>

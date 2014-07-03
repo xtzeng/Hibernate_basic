@@ -1,5 +1,9 @@
 package com.xiaoti.model;
 
+
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +17,7 @@ public class Teacher {
 	private int id;
 	private String name;
 	private String title;
+	private Date lastUpdateTime;
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -36,4 +41,16 @@ public class Teacher {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
+	@Column(name="last_update_time")
+	public Date getLastUpdateTime() {
+		return lastUpdateTime;
+	}
+	public void setLastUpdateTime(Date lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
+	}
+	
+	
+	
+	
 }

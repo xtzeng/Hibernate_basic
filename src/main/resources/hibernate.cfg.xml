@@ -9,9 +9,9 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://114.215.125.186/myhibernate</property>
-        <property name="connection.username">xiaoti</property>
-        <property name="connection.password">xiaoti</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/myhibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
 
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
@@ -29,7 +29,7 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <!--<property name="hbm2ddl.auto">update</property>-->
+        <!----><property name="hbm2ddl.auto">update</property>
         <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
 
         <mapping resource="com/xiaoti/model/Student.hbm.xml"/>

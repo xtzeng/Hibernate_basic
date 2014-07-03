@@ -1,10 +1,14 @@
 package com.xiaoti.model;
 
+import java.util.Date;
+
+
 public class Student {
 	
 	private int id;
 	private String name;
 	private int age;
+	private Date lastUpdateTime;
 	
 	public int getId() {
 		return id;
@@ -26,6 +30,14 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	
+	public Date getLastUpdateTime() {
+		return lastUpdateTime;
+	}
+	public void setLastUpdateTime(Date lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
+	}
+	
 	
 	
 }
