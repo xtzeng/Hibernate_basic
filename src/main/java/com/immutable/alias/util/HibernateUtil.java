@@ -1,4 +1,4 @@
-package com.xiaoti.util;
+package com.immutable.alias.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
