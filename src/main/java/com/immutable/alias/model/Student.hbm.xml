@@ -4,9 +4,9 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.immutable.alias.model.Student" table="student">
+	<class name="com.immutable.alias.model.Student" table="student" dynamic-update="true">
 		<id name="id">
-			<generator class="increment"/>
+			<generator class="native"/>
 		</id>
 		<property name="name" />
 		<property name="age" />

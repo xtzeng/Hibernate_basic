@@ -8,16 +8,16 @@
     <session-factory>
 
         <!-- Database connection settings -->
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/myhibernate</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:cgq</property>
+        <property name="connection.username">scott</property>
+        <property name="connection.password">tiger</property>
 
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
 
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
 
         <!-- Enable Hibernate's automatic session context management -->
         <property name="current_session_context_class">thread</property>
@@ -31,7 +31,7 @@
 
         <!-- Drop and re-create the database schema on startup -->
         <!----><property name="hbm2ddl.auto">update</property>
-        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
+        <!----><property name="hibernate.hbm2ddl.auto">create</property>
 
         <mapping resource="com/immutable/alias/model/Student.hbm.xml"/>
 		<mapping class="com.immutable.alias.model.Teacher"/>

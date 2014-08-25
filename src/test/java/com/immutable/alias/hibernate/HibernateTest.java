@@ -35,6 +35,7 @@ public class HibernateTest {
    public void testNormal() {
 	   
 	   	Student s = new Student();
+	   	s.setId("1");
 		s.setName("zhangsan");
 		s.setAge(8);
 		s.setLastUpdateTime(new Date());
