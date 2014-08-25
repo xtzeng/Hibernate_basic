@@ -50,17 +50,19 @@ public class HibernateTest {
    @Test
    public void testAnnotation() {
 	  
-		
-	   	Teacher teacher = new Teacher();
-	   	teacher.setName("lili");
-	   	teacher.setTitle("professor");
-	   	teacher.setGood(true);
-	   	teacher.setGender(Gender.FEMALE);
-	   	teacher.setLastUpdateTime(new Date());
-		Session session = sessionFactory.getCurrentSession();
-		session.beginTransaction();
-		session.save(teacher);
-		session.getTransaction().commit();
+		for(int i=0;i<=100;i++) {
+		  	Teacher teacher = new Teacher();
+		   	teacher.setName("lili");
+		   	teacher.setTitle("professor");
+		   	teacher.setGood(true);
+		   	teacher.setGender(Gender.FEMALE);
+		   	teacher.setLastUpdateTime(new Date());
+			Session session = sessionFactory.getCurrentSession();
+			session.beginTransaction();
+			session.save(teacher);
+			session.getTransaction().commit();
+		}
+	 
    }
 	
 }
