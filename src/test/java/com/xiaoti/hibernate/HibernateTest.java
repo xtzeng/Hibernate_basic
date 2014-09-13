@@ -10,9 +10,9 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.junit.Test;
 
-import com.xiaoti.model.Student;
-import com.xiaoti.model.Teacher;
-import com.xiaoti.util.HibernateUtil;
+import com.immutable.alias.model.Student;
+import com.immutable.alias.model.Teacher;
+import com.immutable.alias.util.HibernateUtil;
 
 public class HibernateTest {
 

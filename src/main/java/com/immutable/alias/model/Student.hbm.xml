@@ -4,7 +4,7 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.xiaoti.model.Student" table="student">
+	<class name="com.immutable.alias.model.Student" table="student">
 		<id name="id">
 			<generator class="increment"/>
 		</id>

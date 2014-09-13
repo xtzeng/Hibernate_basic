@@ -1,4 +1,4 @@
-package com.xiaoti.model;
+package com.immutable.alias.model;
 
 import java.util.Date;
 
