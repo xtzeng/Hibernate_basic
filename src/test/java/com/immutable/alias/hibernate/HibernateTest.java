@@ -35,8 +35,8 @@ public class HibernateTest {
    public void testNormal() {
 	   
 	   	Student s = new Student();
-		s.setName("zhangsan");
-		s.setAge(8);
+		s.setName("zhangsan_basic");
+		s.setAge(28);
 		s.setLastUpdateTime(new Date());
 		
 	   Session session = sessionFactory.getCurrentSession();
