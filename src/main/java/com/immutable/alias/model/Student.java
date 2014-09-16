@@ -5,19 +5,25 @@ import java.util.Date;
 
 public class Student {
 	
-	private int id;
+	private Long id;
 	private String name;
 	private int age;
+	private boolean good;
 	private Date lastUpdateTime;
 	
+	private StudentPK pk;
 	
-	public int getId() {
+	
+	
+		
+	
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-	
 	public String getName() {
 		return name;
 	}
@@ -37,6 +43,18 @@ public class Student {
 	}
 	public void setLastUpdateTime(Date lastUpdateTime) {
 		this.lastUpdateTime = lastUpdateTime;
+	}
+	public StudentPK getPk() {
+		return pk;
+	}
+	public void setPk(StudentPK pk) {
+		this.pk = pk;
+	}
+	public boolean isGood() {
+		return good;
+	}
+	public void setGood(boolean good) {
+		this.good = good;
 	}
 	
 	

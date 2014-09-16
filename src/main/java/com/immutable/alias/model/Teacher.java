@@ -20,10 +20,14 @@ import com.immutable.alias.constant.Gender;
 @Entity
 @Table(name="teacher")
 public class Teacher {
+	
+
+	
 	private int id;
 	private String name;
 	private String title;
 	private Date lastUpdateTime;
+	
 	
 	private String yourWifeName;
 	private boolean good;
@@ -32,7 +36,11 @@ public class Teacher {
 	private String length;
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE
+    ,generator="SEQ_GEN")
+	@javax.persistence.SequenceGenerator(name="SEQ_GEN",
+    sequenceName="my_sequence",
+    allocationSize=1)
 	public int getId() {
 		return id;
 	}
