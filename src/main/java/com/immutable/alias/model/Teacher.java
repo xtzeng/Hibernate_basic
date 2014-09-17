@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 
 import com.immutable.alias.constant.Gender;
@@ -19,6 +20,12 @@ import com.immutable.alias.constant.Gender;
 
 @Entity
 @Table(name="teacher")
+@TableGenerator(name="inventory",
+	table="U_SEQUENCES",
+	pkColumnName = "S_ID",
+	valueColumnName = "S_NEXTNUM",
+	pkColumnValue = "inventory",
+	allocationSize = 1000)
 public class Teacher {
 	
 
@@ -36,11 +43,8 @@ public class Teacher {
 	private String length;
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE
-    ,generator="SEQ_GEN")
-	@javax.persistence.SequenceGenerator(name="SEQ_GEN",
-    sequenceName="my_sequence",
-    allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.TABLE
+    ,generator="inventory")
 	public int getId() {
 		return id;
 	}
