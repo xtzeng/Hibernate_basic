@@ -5,16 +5,15 @@
 
 <hibernate-mapping>
 	<class name="com.immutable.alias.model.Student" table="student">
-		<!----> <id name="id">
+		 <!-- <id name="id">
 			<generator class="native"/>
-		</id> 
+		</id>  -->
 		
-		<!-- <composite-id name="pk" class="com.immutable.alias.model.StudentPK">
+	 <composite-id name="pk" class="com.immutable.alias.model.StudentPK">
 			<key-property name="id"></key-property>
 			<key-property name="name"></key-property>
-		</composite-id> -->
+		</composite-id> 
 		
-		<property name="name" />
 		<property name="age" />
 		<property name="lastUpdateTime"  column="last_update_time" />
 		<property name="good" type="yes_no"></property>

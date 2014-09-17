@@ -15,6 +15,7 @@ import com.immutable.alias.constant.Gender;
 import com.immutable.alias.model.Student;
 import com.immutable.alias.model.StudentPK;
 import com.immutable.alias.model.Teacher;
+import com.immutable.alias.model.TeacherPK;
 import com.immutable.alias.util.HibernateUtil;
 
 public class HibernateIDTest {
@@ -35,12 +36,11 @@ public class HibernateIDTest {
 
 	@Test
 	public void testStudentSave() {
-//		StudentPK pk = new StudentPK();
-//		pk.setId(1);
-//		pk.setName("zhangsan");
+		StudentPK pk = new StudentPK();
+		pk.setId(1);
+		pk.setName("zhangsan");
 		Student s = new Student();
-//		s.setPk(pk);
-		s.setName("lisi");
+		s.setPk(pk);
 		s.setAge(8);
 		s.setLastUpdateTime(new Date());
 		s.setGood(true);
@@ -55,8 +55,14 @@ public class HibernateIDTest {
 	@Test
 	public void testTeacherSave() {
 	
+/*		TeacherPK pk = new TeacherPK();
+		pk.setId(1);
+		pk.setName("helloTeacher");*/
 		Teacher t = new Teacher();
-		t.setName("Mrs.Li");
+//		t.setPk(pk);
+//		t.setId(2);
+		t.setName("lisa");
+		t.setLength("5 fitch");
 		t.setTitle("middle");
 		t.setLastUpdateTime(new Date());
 		t.setYourWifeName("小三");

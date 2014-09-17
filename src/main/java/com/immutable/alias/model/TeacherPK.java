@@ -1,5 +1,8 @@
 package com.immutable.alias.model;
 
+import javax.persistence.Embeddable;
+
+//@Embeddable
 public class TeacherPK implements java.io.Serializable{
 	/**
 	 */

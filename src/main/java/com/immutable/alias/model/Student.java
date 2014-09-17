@@ -5,20 +5,23 @@ import java.util.Date;
 
 public class Student {
 	
-	private Long id;
-	private String name;
+/*	private Long id;
+	private String name;*/
+	
+	private StudentPK pk;
+	
 	private int age;
 	private boolean good;
 	private Date lastUpdateTime;
 	
-	private StudentPK pk;
+
 	
 	
 	
 		
 	
 
-	public Long getId() {
+/*	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
@@ -29,7 +32,7 @@ public class Student {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
+	}*/
 	
 	public int getAge() {
 		return age;

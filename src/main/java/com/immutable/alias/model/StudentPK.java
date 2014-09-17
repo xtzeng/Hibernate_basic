@@ -24,7 +24,7 @@ public class StudentPK implements java.io.Serializable{
 	@Override
 	public boolean equals(Object o) {
 		if(o instanceof StudentPK) {
-			StudentPK pk = (StudentPK)o;
+			StudentPK pk = (StudentPK) o;
 			if(this.id == pk.getId() && this.name.equals(pk.getName())) {
 				return true;
 			}

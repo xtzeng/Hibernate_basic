@@ -5,12 +5,14 @@ import java.util.Date;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
@@ -19,19 +21,22 @@ import com.immutable.alias.constant.Gender;
 
 
 @Entity
-@Table(name="teacher")
-@TableGenerator(name="inventory",
-	table="U_SEQUENCES",
-	pkColumnName = "S_ID",
-	valueColumnName = "S_NEXTNUM",
-	pkColumnValue = "inventory",
-	allocationSize = 1000)
+//@Table(name="teacher")
+//@TableGenerator(name="inventory",
+//table="U_SEQUENCES",
+//pkColumnName = "S_ID",
+//valueColumnName = "S_NEXTNUM",
+//pkColumnValue = "inventory",
+//allocationSize = 1000)
+@IdClass(value=TeacherPK.class)
 public class Teacher {
 	
 
 	
 	private int id;
 	private String name;
+	
+//	private TeacherPK pk;
 	private String title;
 	private Date lastUpdateTime;
 	
@@ -43,8 +48,7 @@ public class Teacher {
 	private String length;
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.TABLE
-    ,generator="inventory")
+//    @GeneratedValue(strategy=GenerationType.TABLE,generator="inventory")
 	public int getId() {
 		return id;
 	}
@@ -52,6 +56,7 @@ public class Teacher {
 		this.id = id;
 	}
 	
+	@Id
 	public String getName() {
 		return name;
 	}
@@ -59,9 +64,18 @@ public class Teacher {
 		this.name = name;
 	}
 	
+/*	@EmbeddedId
+	public TeacherPK getPk() {
+		return pk;
+	}
+	public void setPk(TeacherPK pk) {
+		this.pk = pk;
+	}
+	*/
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
